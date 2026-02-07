@@ -68,71 +68,76 @@ export default function Carousel() {
   }, [])
 
   return (
-    <section className="w-full bg-black py-16 ml-16 mr-16 p-96">
-        {/* Slides */}
-        <div
-          className="flex transition-transform duration-700 ease-in-out gap-12"
-          style={{
-            transform: `translateX(-${active * 100}%)`,
-          }}
-        >
+    <section className="
+  w-full
+  bg-black
+  py-10 sm:py-16
+  px-4 sm:px-8 lg:px-16
+">
 
-          {slides.map((slide) => (
-            <div
-              key={slide.id}
-              className="relative min-w-full h-[60vh] gap-16 rounded-xl overflow-hidden bg-zinc-900"
-            >
+  {/* Slides */}
+  <div
+    className="flex transition-transform duration-700 ease-in-out gap-6 sm:gap-12"
+    style={{
+      transform: `translateX(-${active * 100}%)`,
+    }}
+  >
 
-              {/* Image / Skeleton */}
-              {slide.image ? (
-                <Image
-                  src={slide.image}
-                  alt={slide.title}
-                  fill
-                  className="object-cover"
-                />
-              ) : (
-                /* Skeleton */
-                <div className="absolute inset-0 animate-pulse bg-gradient-to-r from-zinc-800 via-zinc-700 to-zinc-800" />
-              )}
+    {slides.map((slide) => (
+      <div
+        key={slide.id}
+        className="relative min-w-full h-[40vh] sm:h-[60vh] rounded-xl overflow-hidden bg-zinc-900"
+      >
 
-              {/* Text Content */}
-              <div className="absolute bottom-8 left-6 sm:left-10 max-w-lg text-white">
+        {/* Image */}
+        {slide.image ? (
+          <Image
+            src={slide.image}
+            alt={slide.title}
+            fill
+            className="object-cover"
+          />
+        ) : (
+          <div className="absolute inset-0 animate-pulse bg-zinc-800" />
+        )}
 
-                <h3 className="font-playfair text-2xl sm:text-3xl font-semibold mb-2">
-                  {slide.title}
-                </h3>
+        {/* Text */}
+        <div className="absolute bottom-4 left-4 sm:bottom-8 sm:left-10 max-w-[90%] sm:max-w-lg text-white">
 
-                <p className="font-jost text-sm sm:text-base text-white/80">
-                  {slide.subtitle}
-                </p>
+          <h3 className="font-playfair text-xl sm:text-3xl font-semibold mb-2">
+            {slide.title}
+          </h3>
 
-              </div>
-
-            </div>
-          ))}
-
-        </div>
-
-        {/* Dots */}
-        <div className="mt-6 flex justify-center gap-3">
-
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setActive(index)}
-              className={`
-                h-2.5 w-2.5 rounded-full transition-all duration-300
-                ${active === index
-                  ? "bg-white w-16"
-                  : "bg-white/40 hover:bg-white/70"}
-              `}
-            />
-          ))}
+          <p className="font-jost text-sm sm:text-base text-white/80">
+            {slide.subtitle}
+          </p>
 
         </div>
 
+      </div>
+    ))}
 
-    </section>
+  </div>
+
+  {/* Dots */}
+  <div className="mt-6 flex justify-center gap-3">
+
+    {slides.map((_, index) => (
+      <button
+        key={index}
+        onClick={() => setActive(index)}
+        className={`
+          h-2.5 w-2.5 rounded-full transition-all duration-300
+          ${active === index
+            ? "bg-white w-10 sm:w-16"
+            : "bg-white/40 hover:bg-white/70"}
+        `}
+      />
+    ))}
+
+  </div>
+
+</section>
+
   )
 }

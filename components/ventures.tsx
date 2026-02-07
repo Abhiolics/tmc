@@ -32,86 +32,98 @@ const ventures = [
 
 export default function OurVentures() {
   return (
-    <section className="w-full bg-black py-20">
+   <section className="w-full bg-black py-12 sm:py-20">
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
 
-        {/* Heading */}
-        <div className="mb-16 text-center">
+    {/* Heading */}
+    <div className="mb-10 sm:mb-16 text-center">
 
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-white mb-4">
-            Our Ventures
-          </h2>
+      <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4">
+        Our Ventures
+      </h2>
 
-          <p className="font-jost text-white/70 max-w-2xl mx-auto text-base md:text-lg">
-            Discover our handpicked premium destinations crafted for luxury,
-            comfort, and unforgettable experiences.
-          </p>
+      <p className="font-jost text-white/70 max-w-2xl mx-auto text-sm sm:text-base md:text-lg">
+        Discover our handpicked premium destinations crafted for luxury,
+        comfort, and unforgettable experiences.
+      </p>
 
-        </div>
+    </div>
 
-        {/* First Row → 2 Cards */}
-      <div className="mb-10 flex justify-center">
+    {/* First Row → 2 Cards */}
+    <div className="mb-8 sm:mb-10 flex justify-center">
 
-  {/* Inner Grid */}
-  <div className="grid w-full max-w-4xl grid-cols-1 sm:grid-cols-2">
+      <div className="grid w-full max-w-4xl grid-cols-1 sm:grid-cols-2 gap-6">
 
-    {ventures.slice(0, 2).map((item, index) => (
-      <div key={index} className="h-[24rem]">
+        {ventures.slice(0, 2).map((item, index) => (
+          <div
+            key={index}
+            className="h-[18rem] sm:h-[22rem] md:h-[24rem]"
+          >
 
-        <DirectionAwareHover imageUrl={item.image}>
+            <DirectionAwareHover imageUrl={item.image}>
 
-          <div className="flex flex-col items-center justify-end h-full p-6 text-white">
+              <div className="
+                flex flex-col items-center justify-end
+                h-full p-4 sm:p-6 text-white
+                bg-black/20 sm:bg-transparent
+              ">
 
-            <p className="font-playfair text-3xl font-semibold mb-1">
-              {item.title}
-            </p>
+                <p className="font-playfair text-2xl sm:text-3xl font-semibold mb-1">
+                  {item.title}
+                </p>
 
-            <p className="font-jost text-sm text-white/80">
-              {item.subtitle}
-            </p>
+                <p className="font-jost text-xs sm:text-sm text-white/80">
+                  {item.subtitle}
+                </p>
+
+              </div>
+
+            </DirectionAwareHover>
 
           </div>
-
-        </DirectionAwareHover>
+        ))}
 
       </div>
-    ))}
+    </div>
+
+    {/* Second Row → 3 Cards */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+
+      {ventures.slice(2).map((item, index) => (
+        <div
+          key={index}
+          className="h-[17rem] sm:h-[20rem] md:h-[22rem]"
+        >
+
+          <DirectionAwareHover imageUrl={item.image}>
+
+            <div className="
+              flex flex-col justify-end
+              h-full p-4 sm:p-6 text-white
+              bg-black/20 sm:bg-transparent
+            ">
+
+              <p className="font-playfair text-2xl sm:text-3xl font-semibold mb-1">
+                {item.title}
+              </p>
+
+              <p className="font-jost text-xs sm:text-sm text-white/80">
+                {item.subtitle}
+              </p>
+
+            </div>
+
+          </DirectionAwareHover>
+
+        </div>
+      ))}
+
+    </div>
 
   </div>
 
-</div>
+</section>
 
-
-        {/* Second Row → 3 Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-          {ventures.slice(2).map((item, index) => (
-            <div key={index} className="h-[22rem]">
-
-              <DirectionAwareHover imageUrl={item.image}>
-
-                <div className="flex flex-col justify-end h-full p-6 text-white">
-
-                  <p className="font-playfair text-3xl font-semibold mb-1">
-                    {item.title}
-                  </p>
-
-                  <p className="font-jost text-sm text-white/80">
-                    {item.subtitle}
-                  </p>
-
-                </div>
-
-              </DirectionAwareHover>
-
-            </div>
-          ))}
-
-        </div>
-
-      </div>
-
-    </section>
   )
 }
