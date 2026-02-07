@@ -7,34 +7,52 @@ import Image from "next/image"
 const slides = [
   {
     id: 1,
-    image: "/carousel/slide1.jpg",
+    image: "/gallery/MC2020_3.jpeg",
     title: "Luxury Nights",
     subtitle: "Experience the finest clubbing",
   },
   {
     id: 2,
-    image: "/carousel/slide2.jpg",
+    image: "/gallery/MC2020_4.jpeg",
     title: "Live DJs",
     subtitle: "World-class music vibes",
   },
   {
     id: 3,
-    image: "", // ❗ Empty = Skeleton
+    image: "/gallery/MC2020_7.jpeg", // ❗ Empty = Skeleton
     title: "VIP Lounge",
     subtitle: "Private. Premium. Exclusive.",
   },
   {
     id: 4,
-    image: "/carousel/slide4.jpg",
+    image: "/gallery/MC2020_10.jpeg",
     title: "Signature Cocktails",
     subtitle: "Crafted to perfection",
   },
   {
     id: 5,
-    image: "/carousel/slide5.jpg",
+    image: "/gallery/MC2020_12.jpeg",
     title: "Unforgettable Nights",
     subtitle: "Where memories are made",  
-  }
+  },
+   {
+    id: 6,
+    image: "/gallery/MC2020_13.jpeg",
+    title: "Signature Cocktails",
+    subtitle: "Crafted to perfection",
+  },
+   {
+    id: 7,
+    image: "/gallery/MC2020_15.jpeg",
+    title: "Signature Cocktails",
+    subtitle: "Crafted to perfection",
+  },
+   {
+    id: 8,
+    image: "/gallery/MC2020_18.jpeg",
+    title: "Signature Cocktails",
+    subtitle: "Crafted to perfection",
+  },
 ]
 
 export default function Carousel() {
@@ -106,7 +124,7 @@ export default function Carousel() {
               className={`
                 h-2.5 w-2.5 rounded-full transition-all duration-300
                 ${active === index
-                  ? "bg-white w-6"
+                  ? "bg-white w-16"
                   : "bg-white/40 hover:bg-white/70"}
               `}
             />

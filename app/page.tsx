@@ -6,6 +6,7 @@ import OurVentures from "@/components/ventures"
 import WhyChooseUs from "@/components/features"
 import FeatureGrid from "@/components/featuresgrid"
 import ContactSection from "@/components/contact"
+import VideoReels from "@/components/videomodal"
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         {/* Hero */}
         <Hero />
         <Carousel />
+        <VideoReels />
         <OurVentures />
         <WhyChooseUs />
         <FeatureGrid  />

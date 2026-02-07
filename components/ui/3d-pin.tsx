@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
+import { useRouter } from "next/navigation"
+
 
 
 export const PinContainer = ({
@@ -29,14 +31,15 @@ export const PinContainer = ({
   };
 
   return (
-    <a className={cn(
-        "relative group/pin z-50  cursor-pointer",
-        containerClassName
-      )}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-      href={href || "/"}
-    >
+  <div
+  className={cn("relative group/pin z-50 cursor-pointer", containerClassName)}
+  onMouseEnter={onMouseEnter}
+  onMouseLeave={onMouseLeave}
+  onClick={() => href && router.push(href)}
+  role="link"
+  tabIndex={0}
+>
+
       <div
         style={{
           perspective: "1000px",
@@ -54,7 +57,7 @@ export const PinContainer = ({
         </div>
       </div>
       <PinPerspective title={title} href={href} />
-    </a>
+    </div>
   );
 };
 
