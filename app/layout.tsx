@@ -30,7 +30,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: "The Metropolitan Club",
-  description: "Premium Nightlife Experience",
+  description: "Premium Nightlife Experience| Designed & Developed by Abhay Pratap Singh",
 }
 
 export default function RootLayout({

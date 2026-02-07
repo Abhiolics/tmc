@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 
 export default function Hero() {
   return (
@@ -51,11 +52,23 @@ export default function Hero() {
             {/* CTA */}
             <div className="flex flex-wrap gap-4 pt-4">
 
-              <button
-                className="rounded-full border border-white/30 bg-white/10 backdrop-blur-xl px-8 py-3 text-sm font-semibold text-white shadow-lg hover:bg-white/20 transition"
-              >
-                Book Your Table Now
-              </button>
+           <Link href="/comingsoon">
+  <button
+    className="
+      rounded-full
+      border border-white/30
+      bg-white/10 backdrop-blur-xl
+      px-8 py-3
+      text-sm font-semibold text-white
+      shadow-lg
+      hover:bg-white/20
+      transition
+      cursor-pointer
+    "
+  >
+    Book Your Table Now
+  </button>
+</Link>
 
             </div>
 
