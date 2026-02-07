@@ -19,7 +19,9 @@ export const PinContainer = ({
   className?: string;
   containerClassName?: string;
 }) => {
-  const [transform, setTransform] = useState(
+ const router = useRouter(); // ✅ ADD THIS
+
+const [transform, setTransform] = useState(
     "translate(-50%,-50%) rotateX(0deg)"
   );
 
@@ -36,8 +38,9 @@ export const PinContainer = ({
   onMouseEnter={onMouseEnter}
   onMouseLeave={onMouseLeave}
   onClick={() => href && router.push(href)}
-  role="link"
-  tabIndex={0}
+      role="link"
+      tabIndex={0}
+
 >
 
       <div
