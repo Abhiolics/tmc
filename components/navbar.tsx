@@ -24,7 +24,7 @@ export default function Navbar() {
         />
       )}
 
-      <nav className="relative z-50 flex w-full items-center justify-between px-4 sm:px-6 lg:px-12 py-4 backdrop-blur-xl bg-black/40 border-b border-white/10">
+      <nav className="relative -z-50 flex w-full items-center justify-between px-4 sm:px-6 lg:px-12 py-4 backdrop-blur-xl bg-black/40 border-b border-white/10">
 
         {/* Logo */}
         <div className="flex items-center gap-2">
@@ -124,8 +124,8 @@ export default function Navbar() {
       {/* Mobile Sidebar */}
       <aside
         className={`
-          fixed top-0 right-0 h-full w-[85%] max-w-sm
-         bg-white/5 backdrop-blur-2xl
+     fixed top-0 right-0 h-full w-[85%] max-w-sm
+          bg-black/90 backdrop-blur-xl
           border-l border-white/10
           z-50
           transform transition-transform duration-300
@@ -151,7 +151,10 @@ export default function Navbar() {
         </div>
 
         {/* Menu */}
-        <div className="flex flex-col p-6 space-y-6 text-white text-base">
+        <div className="flex flex-col p-6 space-y-6 text-white text-base bg-gradient-to-b from-black/95 via-black/85 to-black/75
+backdrop-blur-2xl backdrop-blur-xl
+          border-l border-white/10
+          z-50">
 
           {[
             ["Home", "/"],
