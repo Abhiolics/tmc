@@ -65,7 +65,7 @@ export default function Footer() {
         {/* Bottom Row */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6 text-sm text-white/60 font-jost">
           {/* Copyright */}
-          <p>© Scalezy 2026. All rights reserved.</p>
+          <p>© Designed by Abhay Pratap Singh. All rights reserved.</p>
 
           {/* Social Icons */}
           <div className="flex items-center gap-5">

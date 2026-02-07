@@ -32,9 +32,9 @@ const ventures = [
 
 export default function OurVentures() {
   return (
-   <section className="w-full bg-black py-12 sm:py-20">
+   <section className="w-full bg-black py-12 sm:py-20 ">
 
-  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6  lg:px-12">
 
     {/* Heading */}
     <div className="mb-10 sm:mb-16 text-center">
@@ -53,7 +53,8 @@ export default function OurVentures() {
     {/* First Row → 2 Cards */}
     <div className="mb-8 sm:mb-10 flex justify-center">
 
-      <div className="grid w-full max-w-4xl grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className="grid w-full max-w-4xl grid-cols-1 sm:grid-cols-2  place-items-center">
+
 
         {ventures.slice(0, 2).map((item, index) => (
           <div
@@ -88,12 +89,13 @@ export default function OurVentures() {
     </div>
 
     {/* Second Row → 3 Cards */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+ <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-18 sm:gap-8 lg:gap-22 place-items-center">
+
 
       {ventures.slice(2).map((item, index) => (
         <div
           key={index}
-          className="h-[17rem] sm:h-[20rem] md:h-[22rem]"
+          className="h-[17rem] sm:h-[20rem] md:h-[22rem] "
         >
 
           <DirectionAwareHover imageUrl={item.image}>

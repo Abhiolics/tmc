@@ -31,7 +31,7 @@ export default function Hero() {
 
             {/* Badge */}
             <span className="inline-block rounded-full bg-pink-500/20 px-4 py-1 text-sm font-semibold text-pink-400 backdrop-blur font-jost">
-              Night Life Experience
+               Experience the Luxury
             </span>
 
             {/* Heading */}

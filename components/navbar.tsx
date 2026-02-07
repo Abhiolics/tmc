@@ -190,6 +190,13 @@ export default function Navbar() {
             <p>✉️ info@metropolitanclubs.com</p>
 
           </div>
+          <Image
+            src="/ccomingsoon.svg"
+            alt="Contact Us"
+            width={300}
+            height={300}
+            className="object-contain mt-4"
+            />
 
         </div>
 
