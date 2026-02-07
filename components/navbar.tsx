@@ -10,8 +10,12 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full font-jost">
-
+   <header className="
+  fixed top-0 z-50 w-full font-jost
+  backdrop-blur-2xl
+  bg-black/30
+  supports-[backdrop-filter]:bg-black/20
+">
       {/* Overlay */}
       {mobileOpen && (
         <div
@@ -121,7 +125,7 @@ export default function Navbar() {
       <aside
         className={`
           fixed top-0 right-0 h-full w-[85%] max-w-sm
-          bg-black/90 backdrop-blur-xl
+         bg-white/5 backdrop-blur-2xl
           border-l border-white/10
           z-50
           transform transition-transform duration-300
